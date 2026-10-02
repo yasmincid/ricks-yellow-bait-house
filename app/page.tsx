@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -157,136 +157,44 @@ export default function Home() {
           <path d="M0 42C240 90 400 4 720 38S1200 90 1440 30V80H0Z" fill="#fffdf5" />
         </svg>
       </section>
-      {/* Brands */}
-      <section id="brands" className="border-b border-[#102d40]/10 bg-[#fffdf5]">
-        <div className="mx-auto max-w-7xl px-6 py-12" data-reveal>
-          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#df2331]">{t("Brands we work with", "Marcas con las que trabajamos")}</p>
-              <h2 className="mt-3 text-2xl font-black sm:text-3xl">{t("Serious gear. Local connections.", "Grandes marcas. Cercanía local.")}</h2>
-            </div>
-            <p className="max-w-xl text-sm leading-7 text-[#536570]">{t("We maintain direct contact with PENN, Daiwa, Shimano, Okuma, and Quantum. Ask us about products and availability.", "Mantenemos contacto directo con PENN, Daiwa, Shimano, Okuma y Quantum. Consulta productos y disponibilidad.")}</p>
-          </div>
-          <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-7 border-t border-[#102d40]/10 pt-8 sm:justify-between">
-            {[
-              { name: "PENN", file: "penn.svg" },
-              { name: "Daiwa", file: "daiwa.png" },
-              { name: "Shimano", file: "shimano.svg" },
-              { name: "Okuma", file: "okuma.svg" },
-              { name: "Quantum", file: "quantum.png" },
-            ].map((brand) => (
-              <li key={brand.name} className="brand-mark relative h-16 w-28 sm:w-36">
-                <Image src={`/brands/${brand.file}`} alt={brand.name} fill sizes="144px" className="object-contain" />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-      <section id="more-brands" className="border-b border-[#102d40]/10 bg-[#fffdf5]">
-        <div className="mx-auto max-w-7xl px-6 pb-10 pt-6">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.16em] text-[#536570]">
-            {t("More brands in store", "Más marcas en nuestra tienda")}
-          </p>
-          <ul className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-            {[
-              { name: "Sufix", file: "sufix.png", dark: false },
-              { name: "No Live Bait Needed", file: "nlbn.png", dark: true },
-              { name: "Donovan Marine", file: "donovan-marine.png", dark: true },
-              { name: "Huk", file: "huk.png", dark: false },
-              { name: "Mustad", file: "mustad.svg", dark: false },
-            ].map((brand) => (
-              <li
-                key={brand.name}
-                className={`flex h-20 w-36 items-center justify-center rounded-xl px-4 ${brand.dark ? "bg-[#102d40]" : "bg-white"
-                  }`}
-              >
-                <Image
-                  src={`/brands/${brand.file}`}
-                  alt={brand.name}
-                  width={120}
-                  height={55}
-                  className="h-14 w-full object-contain"
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-      {/* Categories */}
-      <section id="products" className="mx-auto max-w-7xl px-6 py-20" data-reveal>
-        <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#df2331]">
-          {t("Inside Rick’s", "Dentro de Rick’s")}
+
+<section id="hours-summary" aria-label={t("Hours at a glance", "Horario resumido")} className="border-b border-[#102d40]/10 bg-[#fffdf5]">
+  <div className="mx-auto grid max-w-7xl gap-5 px-6 py-7 sm:grid-cols-3 sm:items-center">
+    <div>
+      <p className="text-xl font-black text-[#102d40]">
+        {t("Open 365 days", "Abiertos los 365 días")}
+      </p>
+      <p className="mt-1 text-sm text-[#536570]">
+        {t("Including all holidays", "Incluidos todos los festivos")}
+      </p>
+    </div>
+
+    <div>
+      <p className="text-xs font-bold uppercase tracking-wider text-[#536570]">
+        {t("Sunday – Thursday", "Domingo – jueves")}
+      </p>
+      <p className="mt-1 text-lg font-bold text-[#102d40]">
+        {t("4 AM – 11 PM", "4 a. m. – 11 p. m.")}
+      </p>
+    </div>
+
+    <div>
+      <p className="text-xs font-bold uppercase tracking-wider text-[#536570]">
+        {t("Friday & Saturday", "Viernes y sábado")}
+      </p>
+      <div className="mt-1 flex flex-wrap items-center gap-4">
+        <p className="text-lg font-black text-[#df2331]">
+          {t("Open 24 hours", "Abierto las 24 horas")}
         </p>
-        <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">
-          {t("Gear up for your next cast.", "Prepárate para tu próxima pesca.")}
-        </h2>
-        <p className="mt-5 max-w-2xl text-lg leading-8 text-[#536570]">
-          {t("Take a look inside our store. Browse fishing gear and accessories, and call us for current bait and product availability.", "Conoce nuestra tienda y descubre equipos y accesorios de pesca. Llámanos para consultar la disponibilidad de carnada y productos.")}
-        </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              image: "/images/rods-reels.jpeg",
-              alt: t("Fishing rods and reels on display inside Rick’s", "Cañas y carretes en exhibición dentro de Rick’s"),
-              title: t("Rods & reels", "Cañas y carretes"),
-              description:
-                t("Explore our selection of fishing rods and reels for your next trip.", "Explora nuestra selección de cañas y carretes para tu próxima salida."),
-            },
-            {
-              image: "/images/fishing-accessories.jpeg",
-              alt: t("Fishing accessories displayed on the store wall", "Accesorios de pesca exhibidos en la pared de la tienda"),
-              title: t("Tackle & accessories", "Artículos y accesorios"),
-              description:
-                t("Find fishing tackle and practical accessories to complete your setup.", "Encuentra artículos y accesorios de pesca para completar tu equipo."),
-            },
-            {
-              image: "/images/nets-equipment.jpeg",
-              alt: t("Fishing nets and equipment displayed inside Rick’s", "Redes y equipos de pesca en exhibición dentro de Rick’s"),
-              title: t("Nets & equipment", "Redes y equipos"),
-              description:
-                t("Browse fishing nets and equipment to prepare for your day on the water.", "Descubre redes y equipos para prepararte para tu día de pesca."),
-            },
-          ].map((category, index) => (
-            <article
-              key={category.image}
-              className="product-card group overflow-hidden rounded-2xl bg-white shadow-sm"
-            >
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <Image
-                  src={category.image}
-                  alt={category.alt}
-                  fill
-                  sizes="(max-width: 767px) 100vw, 33vw"
-                  className="product-photo object-cover"
-                />
-                <span aria-hidden="true" className="absolute left-5 top-5 rounded-full bg-[#df2331] px-4 py-2 text-xs font-black tracking-wider text-white">0{index + 1}</span>
-              </div>
-              <div className="p-7">
-                <h3 className="text-2xl font-bold">{category.title}</h3>
-                <p className="mt-4 leading-7 text-[#536570]">
-                  {category.description}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-        <div className="mt-8 flex flex-col gap-4 rounded-2xl bg-[#eaf0ec] p-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h3 className="text-lg font-bold">{t("Looking for bait?", "¿Buscas carnada?")}</h3>
-            <p className="mt-1 text-[#536570]">
-              {t("Call the store to check available options before your trip.", "Llámanos para consultar las opciones disponibles antes de tu salida.")}
-            </p>
-          </div>
-          <a
-            href="tel:+13052455550"
-            className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#102d40] px-6 py-3 font-bold text-white transition hover:bg-[#20465d]"
-          >
-            {t("Call (305) 245-5550", "Llamar al (305) 245-5550")}
-          </a>
-        </div>
-      </section>
-      {/* Bait selection */}
-      <section id="bait" className="bg-[#102d40] text-white">
+        <a href="#hours" className="text-sm font-semibold text-[#102d40] underline underline-offset-4">
+          {t("Full schedule", "Horario completo")}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bait" className="bg-[#102d40] text-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f5ce38]">
             {t("Our bait selection", "Nuestra selección de carnadas")}
@@ -366,8 +274,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* History */}
-      <section id="story" className="bg-[#eaf0ec]">
+<section id="brands" className="border-b border-[#102d40]/10 bg-[#fffdf5]">
+        <div className="mx-auto max-w-7xl px-6 py-12" data-reveal>
+          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#df2331]">{t("Brands we work with", "Marcas con las que trabajamos")}</p>
+              <h2 className="mt-3 text-2xl font-black sm:text-3xl">{t("Serious gear. Local connections.", "Grandes marcas. Cercanía local.")}</h2>
+            </div>
+            <p className="max-w-xl text-sm leading-7 text-[#536570]">{t("We maintain direct contact with PENN, Daiwa, Shimano, Okuma, and Quantum. Ask us about products and availability.", "Mantenemos contacto directo con PENN, Daiwa, Shimano, Okuma y Quantum. Consulta productos y disponibilidad.")}</p>
+          </div>
+          <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-7 border-t border-[#102d40]/10 pt-8 sm:justify-between">
+            {[
+              { name: "PENN", file: "penn.svg" },
+              { name: "Daiwa", file: "daiwa.png" },
+              { name: "Shimano", file: "shimano.svg" },
+              { name: "Okuma", file: "okuma.svg" },
+              { name: "Quantum", file: "quantum.png" },
+            ].map((brand) => (
+              <li key={brand.name} className="brand-mark relative h-16 w-28 sm:w-36">
+                <Image src={`/brands/${brand.file}`} alt={brand.name} fill sizes="144px" className="object-contain" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+<section id="more-brands" className="border-b border-[#102d40]/10 bg-[#fffdf5]">
+        <div className="mx-auto max-w-7xl px-6 pb-10 pt-6">
+          <p className="text-center text-xs font-bold uppercase tracking-[0.16em] text-[#536570]">
+            {t("More brands in store", "Más marcas en nuestra tienda")}
+          </p>
+          <ul className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            {[
+              { name: "Sufix", file: "sufix.png", dark: false },
+              { name: "No Live Bait Needed", file: "nlbn.png", dark: true },
+              { name: "Donovan Marine", file: "donovan-marine.png", dark: true },
+              { name: "Huk", file: "huk.png", dark: false },
+              { name: "Mustad", file: "mustad.svg", dark: false },
+            ].map((brand) => (
+              <li
+                key={brand.name}
+                className={`flex h-20 w-36 items-center justify-center rounded-xl px-4 ${brand.dark ? "bg-[#102d40]" : "bg-white"
+                  }`}
+              >
+                <Image
+                  src={`/brands/${brand.file}`}
+                  alt={brand.name}
+                  width={120}
+                  height={55}
+                  className="h-14 w-full object-contain"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+<section id="story" className="bg-[#eaf0ec]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#df2331]">
             {t("Our story", "Nuestra historia")}
@@ -498,9 +461,81 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Visit */}
-      {/* Store hours */}
-      <section id="hours" className="mx-auto max-w-7xl px-6 py-16" data-reveal>
+
+<section id="products" className="mx-auto max-w-7xl px-6 py-20" data-reveal>
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#df2331]">
+          {t("Inside Rick’s", "Dentro de Rick’s")}
+        </p>
+        <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">
+          {t("Gear up for your next cast.", "Prepárate para tu próxima pesca.")}
+        </h2>
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-[#536570]">
+          {t("Take a look inside our store. Browse fishing gear and accessories, and call us for current bait and product availability.", "Conoce nuestra tienda y descubre equipos y accesorios de pesca. Llámanos para consultar la disponibilidad de carnada y productos.")}
+        </p>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              image: "/images/rods-reels.jpeg",
+              alt: t("Fishing rods and reels on display inside Rick’s", "Cañas y carretes en exhibición dentro de Rick’s"),
+              title: t("Rods & reels", "Cañas y carretes"),
+              description:
+                t("Explore our selection of fishing rods and reels for your next trip.", "Explora nuestra selección de cañas y carretes para tu próxima salida."),
+            },
+            {
+              image: "/images/fishing-accessories.jpeg",
+              alt: t("Fishing accessories displayed on the store wall", "Accesorios de pesca exhibidos en la pared de la tienda"),
+              title: t("Tackle & accessories", "Artículos y accesorios"),
+              description:
+                t("Find fishing tackle and practical accessories to complete your setup.", "Encuentra artículos y accesorios de pesca para completar tu equipo."),
+            },
+            {
+              image: "/images/nets-equipment.jpeg",
+              alt: t("Fishing nets and equipment displayed inside Rick’s", "Redes y equipos de pesca en exhibición dentro de Rick’s"),
+              title: t("Nets & equipment", "Redes y equipos"),
+              description:
+                t("Browse fishing nets and equipment to prepare for your day on the water.", "Descubre redes y equipos para prepararte para tu día de pesca."),
+            },
+          ].map((category, index) => (
+            <article
+              key={category.image}
+              className="product-card group overflow-hidden rounded-2xl bg-white shadow-sm"
+            >
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src={category.image}
+                  alt={category.alt}
+                  fill
+                  sizes="(max-width: 767px) 100vw, 33vw"
+                  className="product-photo object-cover"
+                />
+                <span aria-hidden="true" className="absolute left-5 top-5 rounded-full bg-[#df2331] px-4 py-2 text-xs font-black tracking-wider text-white">0{index + 1}</span>
+              </div>
+              <div className="p-7">
+                <h3 className="text-2xl font-bold">{category.title}</h3>
+                <p className="mt-4 leading-7 text-[#536570]">
+                  {category.description}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="mt-8 flex flex-col gap-4 rounded-2xl bg-[#eaf0ec] p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h3 className="text-lg font-bold">{t("Looking for bait?", "¿Buscas carnada?")}</h3>
+            <p className="mt-1 text-[#536570]">
+              {t("Call the store to check available options before your trip.", "Llámanos para consultar las opciones disponibles antes de tu salida.")}
+            </p>
+          </div>
+          <a
+            href="tel:+13052455550"
+            className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#102d40] px-6 py-3 font-bold text-white transition hover:bg-[#20465d]"
+          >
+            {t("Call (305) 245-5550", "Llamar al (305) 245-5550")}
+          </a>
+        </div>
+      </section>
+
+<section id="hours" className="mx-auto max-w-7xl px-6 py-16" data-reveal>
         <div className="relative grid gap-10 overflow-hidden rounded-3xl bg-[#102d40] p-8 text-white sm:p-12 md:grid-cols-2">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f5ce38]">
@@ -550,7 +585,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="visit" className="mx-auto max-w-7xl px-6 py-20" data-reveal>
+
+<section id="visit" className="mx-auto max-w-7xl px-6 py-20" data-reveal>
         <div className="grid gap-10 rounded-[2rem] bg-[#df2331] p-8 text-white sm:p-12 md:grid-cols-2">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em]">
