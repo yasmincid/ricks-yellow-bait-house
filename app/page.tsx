@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -134,7 +134,7 @@ export default function Home() {
               <span className="mt-2 block text-[#f5ce38]">{t("Start at Rick’s.", "Empieza en Rick’s.")}</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-white/85">
-              {t("Bait, tackle, and fishing essentials in Homestead, Florida. Stop by before your next trip and discover a local store with more than 30 years of history.", "Carnada y artículos de pesca en Homestead, Florida. Visítanos antes de tu próxima salida y descubre una tienda local con más de 30 años de historia.")}
+              {t("Bait, tackle, and fishing essentials in Homestead, Florida. Stop by before your next trip and discover a local store with more than 50 years of history.", "Carnada y artículos de pesca en Homestead, Florida. Visítanos antes de tu próxima salida y descubre una tienda local con más de 50 años de historia.")}
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <a href="#bait" className="ricks-button rounded-full bg-[#f5ce38] px-7 py-4 font-bold text-[#102d40]">
@@ -145,7 +145,7 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-semibold text-white/85">
-              <span>{t("50+ years of local history", "Más de 30 años de historia local")}</span>
+              <span>{t("50+ years of local history", "Más de 50 años de historia local")}</span>
               <span>{t("Live · Fresh · Frozen bait", "Carnada viva · Fresca · Congelada")}</span>
             </div>
           </div>
@@ -296,7 +296,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#df2331]">{t("Brands we work with", "Marcas con las que trabajamos")}</p>
-              <h2 className="mt-3 text-2xl font-black sm:text-3xl">{t("Serious gear. Local knowledges.", "Grandes marcas. Cercanía local.")}</h2>
+              <h2 className="mt-3 text-2xl font-black sm:text-3xl">{t("Serious gear. Local knowledges.", "Equipo de calidad. Conocimiento local.")}</h2>
             </div>
             <p className="max-w-xl text-sm leading-7 text-[#536570]">{t("We maintain direct contact with PENN, Daiwa, Shimano, Okuma, and Quantum. Ask us about products and availability.", "Mantenemos contacto directo con PENN, Daiwa, Shimano, Okuma y Quantum. Consulta productos y disponibilidad.")}</p>
           </div>
