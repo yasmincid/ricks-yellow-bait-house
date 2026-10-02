@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -158,43 +158,43 @@ export default function Home() {
         </svg>
       </section>
 
-<section id="hours-summary" aria-label={t("Hours at a glance", "Horario resumido")} className="border-b border-[#102d40]/10 bg-[#fffdf5]">
-  <div className="mx-auto grid max-w-7xl gap-5 px-6 py-7 sm:grid-cols-3 sm:items-center">
-    <div>
-      <p className="text-xl font-black text-[#102d40]">
-        {t("Open 365 days", "Abiertos los 365 días")}
-      </p>
-      <p className="mt-1 text-sm text-[#536570]">
-        {t("Including all holidays", "Incluidos todos los festivos")}
-      </p>
-    </div>
+      <section id="hours-summary" aria-label={t("Hours at a glance", "Horario resumido")} className="border-b border-[#102d40]/10 bg-[#fffdf5]">
+        <div className="mx-auto grid max-w-7xl gap-5 px-6 py-7 sm:grid-cols-3 sm:items-center">
+          <div>
+            <p className="text-xl font-black text-[#102d40]">
+              {t("Open 365 days", "Abiertos los 365 días")}
+            </p>
+            <p className="mt-1 text-sm text-[#536570]">
+              {t("Including all holidays", "Incluidos todos los festivos")}
+            </p>
+          </div>
 
-    <div>
-      <p className="text-xs font-bold uppercase tracking-wider text-[#536570]">
-        {t("Sunday – Thursday", "Domingo – jueves")}
-      </p>
-      <p className="mt-1 text-lg font-bold text-[#102d40]">
-        {t("4 AM – 11 PM", "4 a. m. – 11 p. m.")}
-      </p>
-    </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#536570]">
+              {t("Sunday – Thursday", "Domingo – jueves")}
+            </p>
+            <p className="mt-1 text-lg font-bold text-[#102d40]">
+              {t("4 AM – 11 PM", "4 a. m. – 11 p. m.")}
+            </p>
+          </div>
 
-    <div>
-      <p className="text-xs font-bold uppercase tracking-wider text-[#536570]">
-        {t("Friday & Saturday", "Viernes y sábado")}
-      </p>
-      <div className="mt-1 flex flex-wrap items-center gap-4">
-        <p className="text-lg font-black text-[#df2331]">
-          {t("Open 24 hours", "Abierto las 24 horas")}
-        </p>
-        <a href="#hours" className="text-sm font-semibold text-[#102d40] underline underline-offset-4">
-          {t("Full schedule", "Horario completo")}
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-[#536570]">
+              {t("Friday & Saturday", "Viernes y sábado")}
+            </p>
+            <div className="mt-1 flex flex-wrap items-center gap-4">
+              <p className="text-lg font-black text-[#df2331]">
+                {t("Open 24 hours", "Abierto las 24 horas")}
+              </p>
+              <a href="#hours" className="text-sm font-semibold text-[#102d40] underline underline-offset-4">
+                {t("Full schedule", "Horario completo")}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<section id="bait" className="bg-[#102d40] text-white">
+      <section id="bait" className="bg-[#102d40] text-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f5ce38]">
             {t("Our bait selection", "Nuestra selección de carnadas")}
@@ -273,8 +273,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="mx-auto max-w-7xl px-6 py-8">
+        <div className="flex flex-col gap-4 rounded-2xl bg-[#eaf0ec] p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h3 className="text-lg font-bold">{t("Looking for bait?", "¿Buscas carnada?")}</h3>
+            <p className="mt-1 text-[#536570]">
+              {t("Call the store to check available options before your trip.", "Llámanos para consultar las opciones disponibles antes de tu salida.")}
+            </p>
+          </div>
+          <a
+            href="tel:+13052455550"
+            className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#102d40] px-6 py-3 font-bold text-white transition hover:bg-[#20465d]"
+          >
+            {t("Call (305) 245-5550", "Llamar al (305) 245-5550")}
+          </a>
+        </div>
+      </div>
 
-<section id="brands" className="border-b border-[#102d40]/10 bg-[#fffdf5]">
+
+      <section id="brands" className="border-b border-[#102d40]/10 bg-[#fffdf5]">
         <div className="mx-auto max-w-7xl px-6 py-12" data-reveal>
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
@@ -299,7 +316,7 @@ export default function Home() {
         </div>
       </section>
 
-<section id="more-brands" className="border-b border-[#102d40]/10 bg-[#fffdf5]">
+      <section id="more-brands" className="border-b border-[#102d40]/10 bg-[#fffdf5]">
         <div className="mx-auto max-w-7xl px-6 pb-10 pt-6">
           <p className="text-center text-xs font-bold uppercase tracking-[0.16em] text-[#536570]">
             {t("More brands in store", "Más marcas en nuestra tienda")}
@@ -330,7 +347,7 @@ export default function Home() {
         </div>
       </section>
 
-<section id="story" className="bg-[#eaf0ec]">
+      <section id="story" className="bg-[#eaf0ec]">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#df2331]">
             {t("Our story", "Nuestra historia")}
@@ -462,7 +479,7 @@ export default function Home() {
         </div>
       </section>
 
-<section id="products" className="mx-auto max-w-7xl px-6 py-20" data-reveal>
+      <section id="products" className="mx-auto max-w-7xl px-6 py-20" data-reveal>
         <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#df2331]">
           {t("Inside Rick’s", "Dentro de Rick’s")}
         </p>
@@ -519,23 +536,10 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <div className="mt-8 flex flex-col gap-4 rounded-2xl bg-[#eaf0ec] p-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h3 className="text-lg font-bold">{t("Looking for bait?", "¿Buscas carnada?")}</h3>
-            <p className="mt-1 text-[#536570]">
-              {t("Call the store to check available options before your trip.", "Llámanos para consultar las opciones disponibles antes de tu salida.")}
-            </p>
-          </div>
-          <a
-            href="tel:+13052455550"
-            className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#102d40] px-6 py-3 font-bold text-white transition hover:bg-[#20465d]"
-          >
-            {t("Call (305) 245-5550", "Llamar al (305) 245-5550")}
-          </a>
-        </div>
+
       </section>
 
-<section id="hours" className="mx-auto max-w-7xl px-6 py-16" data-reveal>
+      <section id="hours" className="mx-auto max-w-7xl px-6 py-16" data-reveal>
         <div className="relative grid gap-10 overflow-hidden rounded-3xl bg-[#102d40] p-8 text-white sm:p-12 md:grid-cols-2">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f5ce38]">
@@ -585,8 +589,100 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section id="other-stores" className="bg-[#eaf0ec] px-6 py-16">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-[#df2331]">
+            {t("More places to gear up", "Más lugares para equiparte")}
+          </p>
 
-<section id="visit" className="mx-auto max-w-7xl px-6 py-20" data-reveal>
+          <h2 className="mt-3 text-3xl font-bold text-[#163b45] md:text-4xl">
+            {t("Visit our other stores", "Visita nuestras otras tiendas")}
+          </h2>
+
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[#163b45]">
+            {t(
+              "Heading farther north? Find the same product lines we carry at Rick’s in our Daytona Beach, Titusville and Port Orange stores.",
+              "¿Vas a pescar más al norte? Encuentra las mismas líneas de productos que ofrecemos en Rick’s en nuestras tiendas de Daytona Beach, Titusville y Port Orange."
+            )}
+          </p>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
+            {[
+              {
+                name: "The Fishin’ Hole",
+                city: "Daytona Beach",
+                address: "450 N Beach St, Daytona Beach, FL 32114",
+                phone: "(386) 252-9804",
+                tel: "+13862529804",
+              },
+              {
+                name: "Rick’s Titusville Bait and Tackle",
+                city: "Titusville",
+                address: "1103 Garden St, Titusville, FL 32796",
+                phone: "(321) 264-0996",
+                tel: "+13212640996",
+              },
+              {
+                name: "Rick’s Port Orange Bait & Tackle",
+                city: "Port Orange",
+                address: "4751 S Ridgewood Ave, Port Orange, FL 32127",
+                phone: "(386) 265-5428",
+                tel: "+13862655428",
+              },
+            ].map((store) => (
+              <article
+                key={store.tel}
+                className="flex flex-col rounded-2xl border border-[#163b45]/10 bg-[#fffdf5] p-6"
+              >
+                <p className="text-sm font-bold uppercase tracking-wider text-[#df2331]">
+                  {store.city}
+                </p>
+
+                <h3 className="mt-3 text-xl font-bold text-[#163b45]">
+                  {store.name}
+                </h3>
+
+                <address className="mt-4 not-italic leading-relaxed text-[#163b45]">
+                  {store.address}
+                </address>
+
+                <a
+                  href={`tel:${store.tel}`}
+                  className="mt-3 font-semibold text-[#163b45] hover:underline"
+                >
+                  {store.phone}
+                </a>
+
+                <div className="mt-auto flex flex-wrap gap-3 pt-6">
+                  <a
+                    href={`tel:${store.tel}`}
+                    className="rounded-full bg-[#df2331] px-5 py-3 font-bold text-white"
+                  >
+                    {t("Call", "Llamar")}
+                  </a>
+
+                  <a
+                    href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(store.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-[#163b45]/25 px-5 py-3 font-bold text-[#163b45]"
+                  >
+                    {t("Directions", "Cómo llegar")}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-6 text-sm text-[#163b45]">
+            {t(
+              "Call your nearest store to confirm product and bait availability.",
+              "Llama a tu tienda más cercana para confirmar la disponibilidad de productos y carnadas."
+            )}
+          </p>
+        </div>
+      </section>
+      <section id="visit" className="mx-auto max-w-7xl px-6 py-20" data-reveal>
         <div className="grid gap-10 rounded-[2rem] bg-[#df2331] p-8 text-white sm:p-12 md:grid-cols-2">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em]">
@@ -670,6 +766,7 @@ export default function Home() {
           .ricks-site .ricks-button:hover, .ricks-site .product-card:hover, .ricks-site .product-photo, .ricks-site .brand-mark:hover { transform: none; }
         }
       `}</style>
+
     </main>
   );
 }
